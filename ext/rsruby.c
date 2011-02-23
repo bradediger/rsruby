@@ -144,7 +144,7 @@ VALUE rr_init(VALUE self){
  */
 void init_R(int argc, char **argv){
 
-  char *defaultArgv[] = {"rsruby","-q","--vanilla"};
+  char *defaultArgv[] = {"rsruby","-q","--vanilla","--max-ppsize=100000"};
 
   Rf_initEmbeddedR(sizeof(defaultArgv) / sizeof(defaultArgv[0]), defaultArgv);
   R_Interactive = FALSE; //Remove crash menu (and other interactive R features)
